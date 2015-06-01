@@ -19,19 +19,25 @@ import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
 public class MainActivity extends AppCompatActivity implements BDLocationListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private MapView mMapView;
+
+    @InjectView(R.id.bmapView)
+    MapView mMapView;
     private BaiduMap mBaiduMap;
+
     public LocationClient mLocationClient = null;
-//    private BDLocationListener mMyLocationListener = new MyLocationListener();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.activity_main);
+        ButterKnife.inject(this);
         initMapView();
         getMyLocation();
     }
@@ -118,8 +124,6 @@ public class MainActivity extends AppCompatActivity implements BDLocationListene
     }
 
     private void initMapView() {
-        //获取地图控件引用
-        mMapView = (MapView) findViewById(R.id.bmapView);
         mBaiduMap = mMapView.getMap();
         mLocationClient = new LocationClient(getApplicationContext());
         mLocationClient.registerLocationListener(this);
