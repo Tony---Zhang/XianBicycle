@@ -5,4 +5,11 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <!-- Map View -->
+    <style name="MapToolButton">
+        <item name="android:layout_width">@dimen/map_button_size</item>
+        <item name="android:layout_height">@dimen/map_button_size</item>
+        <item name="android:background">@drawable/map_button</item>
+    </style>
+
 </resources>

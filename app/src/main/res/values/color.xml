@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_grey">#FFC1C5C8</color>
+
+    <color name="map_button_normal">#AAFFFFFF</color>
+    <color name="map_button_press">#F3EAEBEC</color>
+
+</resources>

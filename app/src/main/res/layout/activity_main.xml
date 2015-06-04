@@ -10,4 +10,14 @@
         android:layout_height="match_parent"
         android:clickable="true" />
 
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bmapView"
+        android:layout_alignLeft="@id/bmapView"
+        android:layout_marginLeft="@dimen/map_button_margin"
+        android:layout_marginRight="@dimen/map_button_margin"
+        android:layout_marginBottom="@dimen/map_button_margin"
+        layout="@layout/map_tool_buttons" />
+
 </RelativeLayout>

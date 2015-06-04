@@ -1,10 +1,13 @@
 package com.thoughtworks.xianbicycle;
 
+import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -28,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements BDLocationListene
 
     @InjectView(R.id.bmapView)
     MapView mMapView;
+    @InjectView(R.id.my_location)
+    ImageButton mMyLocation;
     private BaiduMap mBaiduMap;
 
     public LocationClient mLocationClient = null;
@@ -39,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements BDLocationListene
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
         initMapView();
-        getMyLocation();
     }
 
     private void getMyLocation() {
@@ -124,6 +128,8 @@ public class MainActivity extends AppCompatActivity implements BDLocationListene
     }
 
     private void initMapView() {
+        mMapView.showZoomControls(false);
+
         mBaiduMap = mMapView.getMap();
         mLocationClient = new LocationClient(getApplicationContext());
         mLocationClient.registerLocationListener(this);
@@ -134,13 +140,20 @@ public class MainActivity extends AppCompatActivity implements BDLocationListene
         option.setIsNeedAddress(true);//返回的定位结果包含地址信息
         option.setNeedDeviceDirect(true);//返回的定位结果包含手机机头的方向
         mLocationClient.setLocOption(option);
+
+        mMyLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getMyLocation();
+            }
+        });
     }
 
     private void markerLocation(LatLng latLng) {
         mBaiduMap.setMyLocationEnabled(true);
         MyLocationData myLocation = new MyLocationData.Builder().accuracy(10f).latitude(latLng.latitude).longitude(latLng.longitude).build();
         mBaiduMap.setMyLocationData(myLocation);
-        BitmapDescriptor mCurrentMarker = BitmapDescriptorFactory.fromResource(android.R.drawable.ic_menu_mylocation);
+        BitmapDescriptor mCurrentMarker = BitmapDescriptorFactory.fromResource(R.drawable.ic_map_my_pin);
         MyLocationConfiguration config = new MyLocationConfiguration(MyLocationConfiguration.LocationMode.NORMAL, true, mCurrentMarker);
         mBaiduMap.setMyLocationConfigeration(config);
     }

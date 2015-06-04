@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map_button_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageButton
+        style="@style/MapToolButton"
+        android:id="@+id/my_location"
+        android:src="@drawable/ic_map_mylocation"
+        android:contentDescription="@drawable/ic_map_mylocation_normal" />
+
+</LinearLayout>
