@@ -5,7 +5,7 @@
         <selector>
             <item
                 android:state_pressed="false"
-                android:drawable="@drawable/ic_map_mylocation_normal" />
+                android:drawable="@drawable/map_button_default" />
         </selector>
     </item>
 </ripple>
