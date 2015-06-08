@@ -13,11 +13,21 @@
     <include
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/bmapView"
-        android:layout_alignLeft="@id/bmapView"
+        android:layout_alignTop="@id/bmapView"
+        android:layout_alignRight="@id/bmapView"
         android:layout_marginLeft="@dimen/map_button_margin"
         android:layout_marginRight="@dimen/map_button_margin"
-        android:layout_marginBottom="@dimen/map_button_margin"
+        android:layout_marginTop="@dimen/map_button_margin"
         layout="@layout/map_tool_buttons" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/map_search_button_margin"
+        android:layout_marginRight="@dimen/map_search_button_margin"
+        android:layout_marginBottom="@dimen/map_search_button_margin"
+        android:text="@string/Search" />
 
 </RelativeLayout>

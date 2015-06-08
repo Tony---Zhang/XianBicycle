@@ -1,13 +1,11 @@
 package com.thoughtworks.xianbicycle;
 
-import android.graphics.Point;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageButton;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -24,6 +22,7 @@ import com.baidu.mapapi.model.LatLng;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements BDLocationListener {
 
@@ -31,8 +30,7 @@ public class MainActivity extends AppCompatActivity implements BDLocationListene
 
     @InjectView(R.id.bmapView)
     MapView mMapView;
-    @InjectView(R.id.my_location)
-    ImageButton mMyLocation;
+
     private BaiduMap mBaiduMap;
 
     public LocationClient mLocationClient = null;
@@ -127,6 +125,17 @@ public class MainActivity extends AppCompatActivity implements BDLocationListene
         markerLocation(myLoc);
     }
 
+    @OnClick(R.id.my_location)
+    void searchMyLocation() {
+        getMyLocation();
+    }
+
+    @OnClick(R.id.search_button)
+    void search() {
+        Intent intent = new Intent(this, SearchResultActivity.class);
+        startActivity(intent);
+    }
+
     private void initMapView() {
         mMapView.showZoomControls(false);
 
@@ -140,13 +149,6 @@ public class MainActivity extends AppCompatActivity implements BDLocationListene
         option.setIsNeedAddress(true);//返回的定位结果包含地址信息
         option.setNeedDeviceDirect(true);//返回的定位结果包含手机机头的方向
         mLocationClient.setLocOption(option);
-
-        mMyLocation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getMyLocation();
-            }
-        });
     }
 
     private void markerLocation(LatLng latLng) {
