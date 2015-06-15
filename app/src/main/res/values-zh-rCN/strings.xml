@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">西安公共自行车</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_search_result">搜索结果</string>
+
+    <!--Button-->
+    <string name="btn_search">搜索</string>
+    <!--Action-->
+    <string name="action_settings">设置</string>
+
+    <!--Search Result-->
+    <string name="bicycle_set_name">车点名称</string>
+    <string name="bicycle_set_street">地址</string>
+</resources>

@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/BaseListItem"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="12dp">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/bicycle_name"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:text="Set Name"/>
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/bicycle_street"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/bicycle_name"
-        android:textAppearance="@android:style/TextAppearance.Small"
-        android:text="Street"/>
+        <TextView
+            android:id="@+id/bicycle_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bicycle_set_name"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        <TextView
+            android:id="@+id/bicycle_street"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/search_result_list_space"
+            android:text="@string/bicycle_set_street"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+
+    </LinearLayout>
 
 </RelativeLayout>

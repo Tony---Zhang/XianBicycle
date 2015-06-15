@@ -2,7 +2,14 @@
     <string name="app_name">XianBicycle</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="Search">Search</string>
     <string name="title_activity_search_result">Search Result</string>
+
+    <!--Button-->
+    <string name="btn_search">Search</string>
+    <!--Action-->
+    <string name="action_settings">Settings</string>
+
+    <!--Search Result-->
+    <string name="bicycle_set_name">Set Name</string>
+    <string name="bicycle_set_street">Street</string>
 </resources>

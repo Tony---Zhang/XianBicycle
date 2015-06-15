@@ -28,6 +28,6 @@
         android:layout_marginLeft="@dimen/map_search_button_margin"
         android:layout_marginRight="@dimen/map_search_button_margin"
         android:layout_marginBottom="@dimen/map_search_button_margin"
-        android:text="@string/Search" />
+        android:text="@string/btn_search" />
 
 </RelativeLayout>

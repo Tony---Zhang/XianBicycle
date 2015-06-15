@@ -3,11 +3,16 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="list_item_padding">12dp</dimen>
+
     <dimen name="button_radius">3dp</dimen>
 
     <dimen name="map_button_size">36dp</dimen>
     <dimen name="map_stroke">1px</dimen>
     <dimen name="map_button_margin">12dp</dimen>
     <dimen name="map_search_button_margin">28dp</dimen>
+
+    <!--Search Result-->
+    <dimen name="search_result_list_space">6dp</dimen>
 
 </resources>

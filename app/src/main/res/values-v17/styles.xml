@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseListItem">
+        <item name="android:minHeight">?android:listPreferredItemHeight</item>
+        <item name="android:paddingStart">@dimen/list_item_padding</item>
+        <item name="android:paddingEnd">@dimen/list_item_padding</item>
+    </style>
+
+</resources>
