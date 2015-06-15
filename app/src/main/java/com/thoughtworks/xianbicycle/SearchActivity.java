@@ -33,7 +33,7 @@ public class SearchActivity extends AppCompatActivity {
             return;
         }
 
-        Intent intent = new Intent(this, SearchActivity.class);
+        Intent intent = new Intent(this, SearchResultActivity.class);
         intent.putExtra(SEARCH_FILTER_START, searchStartLocation);
         startActivity(intent);
     }

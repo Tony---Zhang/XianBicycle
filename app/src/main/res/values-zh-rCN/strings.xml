@@ -3,6 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_search_result">搜索结果</string>
+    <string name="title_activity_search">出行查询</string>
 
     <!--Button-->
     <string name="btn_search">搜索</string>
