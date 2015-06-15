@@ -8,8 +8,14 @@
     <string name="btn_search">Search</string>
     <!--Action-->
     <string name="action_settings">Settings</string>
+    <!--Message-->
+    <string name="msg_empty_input">Please input search location</string>
 
     <!--Search Result-->
     <string name="bicycle_set_name">Set Name</string>
     <string name="bicycle_set_street">Street</string>
+
+    <!--Search-->
+    <string name="search_history">History</string>
+    <string name="search_start">Start location</string>
 </resources>

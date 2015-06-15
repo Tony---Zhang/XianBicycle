@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements BDLocationListene
 
     @OnClick(R.id.search_button)
     void search() {
-        Intent intent = new Intent(this, SearchResultActivity.class);
+        Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
     }
 

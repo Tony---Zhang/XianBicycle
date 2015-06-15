@@ -3,8 +3,6 @@ package com.thoughtworks.xianbicycle;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.google.common.reflect.TypeToken;
@@ -30,12 +28,12 @@ public class SearchResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search_result);
         ButterKnife.inject(this);
 
-        loadData();
+        loadData(getIntent().getStringExtra(SearchActivity.SEARCH_FILTER_START));
         mSearchResultAdapater = new SearchResultAdapater(this);
         mListView.setAdapter(mSearchResultAdapater);
     }
 
-    private void loadData() {
+    private void loadData(final String searchStart) {
         new AsyncTask<Void, Void, List<BicycleSet>>() {
 
             @Override

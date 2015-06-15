@@ -8,8 +8,14 @@
     <string name="btn_search">搜索</string>
     <!--Action-->
     <string name="action_settings">设置</string>
+    <!--Message-->
+    <string name="msg_empty_input">请输入搜索条件</string>
 
     <!--Search Result-->
     <string name="bicycle_set_name">车点名称</string>
     <string name="bicycle_set_street">地址</string>
+
+    <!--Search-->
+    <string name="search_history">历史记录</string>
+    <string name="search_start">起始地点</string>
 </resources>

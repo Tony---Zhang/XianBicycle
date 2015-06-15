@@ -15,4 +15,7 @@
     <!--Search Result-->
     <dimen name="search_result_list_space">6dp</dimen>
 
+    <!--Search-->
+    <dimen name="search_button_margin">18dp</dimen>
+
 </resources>
